@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- TODO: 'neovim/nvim-lspconfig',
   -- fuzzy finder
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
@@ -34,7 +35,8 @@ local plugins = {
         })
     end
   },
-  -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+  'tpope/vim-commentary',
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
 }
 local opts = {}
 

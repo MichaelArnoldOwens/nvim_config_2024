@@ -20,3 +20,5 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- run current file with python
 vim.keymap.set("n", "<leader>rp", ":!python3 %<cr>")
 
+-- save file on <C-s>
+vim.keymap.set({"n", "i", "v"}, "<C-s>", "<Cmd>w!<CR>")
