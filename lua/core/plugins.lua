@@ -35,8 +35,43 @@ local plugins = {
         })
     end
   },
+  {
+      "kylechui/nvim-surround",
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  },
   'tpope/vim-commentary',
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+  'tpope/vim-fugitive',
+  -- line indent highlights!
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    version = "2.20.7",
+    opts = {
+      indentLine_enabled = 1,
+      filetype_exclude = {
+        "help",
+        "terminal",
+        "lazy",
+        "lspinfo",
+        "TelescopePrompt",
+        "TelescopeResults",
+        "mason",
+        "nvdash",
+        "nvcheatsheet",
+        "",
+      },
+      buftype_exclude = { "terminal" },
+      show_trailing_blankline_indent = false,
+      show_first_indent_level = true,
+      show_current_context = true,
+      show_current_context_start = true,
+    },
+  },
 }
 local opts = {}
 
