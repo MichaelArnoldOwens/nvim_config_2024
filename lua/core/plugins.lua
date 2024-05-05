@@ -45,6 +45,7 @@ local plugins = {
           })
       end
   },
+  'tpope/vim-sensible',
   'tpope/vim-commentary',
   'tpope/vim-fugitive',
   -- line indent highlights!
