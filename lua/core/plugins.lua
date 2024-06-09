@@ -12,14 +12,31 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	-- TODO: 'neovim/nvim-lspconfig',
-	-- fuzzy finder
+	-- tmux vim navigation
+	{
+		"christoomey/vim-tmux-navigator",
+		cmd = {
+			"TmuxNavigateLeft",
+			"TmuxNavigateDown",
+			"TmuxNavigateUp",
+			"TmuxNavigateRight",
+			"TmuxNavigatePrevious",
+		},
+		keys = {
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+		},
+	},
+	-- ### fuzzy finder
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
-	-- colorscheme
+	-- ### colorscheme
 	-- {"catppuccin/nvim", name = "catppuccin", priority = 1000},
 	{ "rose-pine/neovim", priority = 1000, name = "rose-pine", variant = "auto" },
 	{
@@ -59,7 +76,7 @@ local plugins = {
 	"tpope/vim-sensible",
 	"tpope/vim-commentary",
 	"tpope/vim-fugitive",
-	-- line indent highlights!
+	-- ### line indent highlights!
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		version = "2.20.7",
