@@ -12,7 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	-- tmux vim navigation
+	-- ### oil
+	{
+		"stevearc/oil.nvim",
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("oil").setup()
+		end,
+	},
+	-- ### tmux vim navigation
 	{
 		"christoomey/vim-tmux-navigator",
 		cmd = {
