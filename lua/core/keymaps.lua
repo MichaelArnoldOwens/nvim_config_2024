@@ -23,16 +23,16 @@ vim.keymap.set("n", "<leader>rp", ":!python3 %<cr>")
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Cmd>w!<CR>")
 
 -- Yank to the system clipboard
-vim.api.nvim_set_keymap("n", "y", '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "y", '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "Y", '"+Y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>Y", '"+Y', { noremap = true, silent = true })
 
 -- Paste from the system clipboard
-vim.api.nvim_set_keymap("n", "p", '"+p', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "p", '"+p', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "P", '"+P', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>P", '"+P', { noremap = true, silent = true })
 
 -- Delete to the system clipboard
-vim.api.nvim_set_keymap("n", "d", '"+d', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "d", '"+d', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "D", '"+D', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>d", '"+d', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>d", '"+d', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>D", '"+D', { noremap = true, silent = true })
