@@ -7,3 +7,6 @@ vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 		vim.diagnostic.open_float(nil, { focus = false })
 	end,
 })
+
+vim.keymap.set("n", "<leader>[", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>]", vim.diagnostic.goto_prev)
