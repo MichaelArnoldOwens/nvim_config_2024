@@ -30,6 +30,14 @@ local plugins = {
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
+	-- auto pairs mini pairs
+	{
+		"echasnovski/mini.pairs",
+		version = false,
+		config = function()
+			require("mini.pairs").setup()
+		end,
+	},
 	-- ### fuzzy finder
 	{
 		"nvim-telescope/telescope.nvim",
@@ -363,6 +371,7 @@ local plugins = {
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
 				javascript = { { "prettierd", "prettier" } },
+				typescript = { { "prettierd", "prettier" } },
 			},
 		},
 	},
@@ -508,6 +517,7 @@ local plugins = {
 			})
 		end,
 	},
+	-- ### diagnostics
 	{
 		"folke/trouble.nvim",
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
