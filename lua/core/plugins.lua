@@ -382,6 +382,7 @@ local plugins = {
 				-- is found.
 				javascript = { { "prettierd", "prettier" } },
 				typescript = { { "prettierd", "prettier" } },
+				typescriptreact = { { "prettierd", "prettier" } },
 			},
 		},
 	},
