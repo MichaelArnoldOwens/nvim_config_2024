@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	"nvim-tree/nvim-web-devicons",
 	-- ### oil
 	{
 		"stevearc/oil.nvim",
