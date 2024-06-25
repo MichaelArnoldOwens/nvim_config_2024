@@ -12,11 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 	"nvim-tree/nvim-web-devicons",
 	-- ### oil
 	{
 		"stevearc/oil.nvim",
-		opts = {},
+		opts = {
+			view_options = {
+				show_hidden = true,
+			},
+		},
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
@@ -288,7 +296,7 @@ local plugins = {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			-- LSP SERVERS HERE ###
 			local servers = {
-				-- clangd = {},
+				-- clangd = {}
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -510,11 +518,13 @@ local plugins = {
 		config = function()
 			local lint = require("lint")
 
+			-- require("lint.linters.eslint_d").cmd = "eslint_d_wrapper.sh"
+			-- todo figure out how to do this with eslint_d
 			lint.linters_by_ft = {
-				javascript = { "eslint_d" },
-				typescript = { "eslint_d" },
-				javascriptreact = { "eslint_d" },
-				typescriptreact = { "eslint_d" },
+				javascript = { "eslint" },
+				typescript = { "eslint" },
+				javascriptreact = { "eslint" },
+				typescriptreact = { "eslint" },
 				python = { "ruff" },
 				golang = { "golangci-lint" },
 				go = { "golangci-lint" },
