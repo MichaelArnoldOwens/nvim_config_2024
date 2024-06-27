@@ -36,3 +36,9 @@ vim.api.nvim_set_keymap("n", "<leader>P", '"+P', { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<leader>d", '"+d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<leader>d", '"+d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>D", '"+D', { noremap = true, silent = true })
+
+-- Resize splits
+vim.api.nvim_set_keymap("n", "<S-Left>", "<Cmd>vertical resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-Right>", "<Cmd>vertical resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-Up>", "<Cmd>resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-Down>", "<Cmd>resize +2<CR>", { noremap = true, silent = true })
