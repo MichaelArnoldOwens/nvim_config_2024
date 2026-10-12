@@ -126,6 +126,7 @@ local plugins = {
 	-- { "rose-pine/neovim", priority = 1000, name = "rose-pine", variant = "auto" },
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "master",
 		build = ":TSUpdate",
 		config = function()
 			local configs = require("nvim-treesitter.configs")
@@ -584,8 +585,8 @@ local plugins = {
 				javascriptreact = { "eslint" },
 				typescriptreact = { "eslint" },
 				python = { "ruff" },
-				golang = { "golangci-lint" },
-				go = { "golangci-lint" },
+				golang = { "golangcilint" },
+				go = { "golangcilint" },
 			}
 
 			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
